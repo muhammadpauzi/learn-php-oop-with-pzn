@@ -2,6 +2,8 @@
 
 class Person
 {
+    const AUTHOR = "Muhammad Pauzi";
+
     var string $name;
     var ?string $address = null; // nullable
     var string $country = "Indonesia"; // default value
@@ -13,5 +15,10 @@ class Person
         } else {
             echo "Hi $name, my name is $this->name" . PHP_EOL;
         }
+    }
+
+    function info()
+    {
+        echo "Author : " . self::AUTHOR . PHP_EOL;
     }
 }

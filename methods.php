@@ -6,3 +6,4 @@ $pauzi->name = "Pauzi";
 
 $pauzi->sayHello("Pauzi");
 $pauzi->sayHello(null);
+$pauzi->info();
