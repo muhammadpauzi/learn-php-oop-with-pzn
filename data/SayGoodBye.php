@@ -38,8 +38,21 @@ trait CanRun
 {
     public abstract function run(): void;
 }
+// 2:31:00 pzn oop tutorial
+class ParentPerson
+{
+    public function goodBye(string $name): void
+    {
+        echo "Good bye $name in Parent Person" . PHP_EOL;
+    }
 
-class Person
+    public function hello(string $name): void
+    {
+        echo "Hello $name in Parent Person" . PHP_EOL;
+    }
+}
+
+class Person extends ParentPerson
 {
     use SayGoodBye, SayHello, HasName, CanRun;
 
@@ -47,4 +60,14 @@ class Person
     {
         echo "Person $this->name is running..." . PHP_EOL;
     }
+
+    // public function goodBye(string $name): void
+    // {
+    //     echo "Good bye $name in Person" . PHP_EOL;
+    // }
+
+    // public function hello(string $name): void
+    // {
+    //     echo "Hello $name in Person" . PHP_EOL;
+    // }
 }
