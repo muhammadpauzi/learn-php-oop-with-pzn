@@ -52,12 +52,19 @@ class ParentPerson
     }
 }
 
+trait All
+{
+    use SayGoodBye, SayHello, HasName, CanRun;
+}
+
 class Person extends ParentPerson
 {
-    use SayGoodBye, SayHello, HasName, CanRun {
-        // hello as private; // method/property visibility overriding
-        // goodBye as private; // should be error
-    }
+    // use SayGoodBye, SayHello, HasName, CanRun {
+    //     // hello as private; // method/property visibility overriding
+    //     // goodBye as private; // should be error
+    // }
+
+    use All;
 
     public function run(): void
     {
