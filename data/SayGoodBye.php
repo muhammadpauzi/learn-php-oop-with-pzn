@@ -54,7 +54,10 @@ class ParentPerson
 
 class Person extends ParentPerson
 {
-    use SayGoodBye, SayHello, HasName, CanRun;
+    use SayGoodBye, SayHello, HasName, CanRun {
+        // hello as private; // method/property visibility overriding
+        // goodBye as private; // should be error
+    }
 
     public function run(): void
     {
