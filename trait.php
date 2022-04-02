@@ -12,3 +12,5 @@ $person->goodBye("Oji");
 var_dump($person);
 $person->name = "Oji";
 var_dump($person);
+
+$person->run();
