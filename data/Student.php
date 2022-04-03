@@ -26,4 +26,15 @@ class Student
         $joined = join(', ', $arguments);
         echo "invoke Student wih arguments $joined" . PHP_EOL;
     }
+
+    public function __debugInfo()
+    {
+        return [
+            "id" => $this->id,
+            "name" => $this->name,
+            "value" => $this->value,
+            "sample" => $this->sample ?? '',
+            "version"   => "0.0.1",
+        ];
+    }
 }
