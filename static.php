@@ -10,3 +10,6 @@ use Helper\MathHelper;
 echo MathHelper::$name . PHP_EOL;
 MathHelper::$name = "Oji";
 echo MathHelper::$name . PHP_EOL;
+
+$result = MathHelper::sum(10, 10, 10);
+echo $result;
