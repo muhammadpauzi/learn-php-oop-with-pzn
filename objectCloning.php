@@ -17,3 +17,6 @@ var_dump($student2);
 // $student2->id = $student1->id;
 // $student2->name = $student1->name;
 // $student2->value = $student1->value;
+
+// tahapan/steps of __clone magic method
+// $student1 => $student2 = clone $student1 => $student2->__clone();
