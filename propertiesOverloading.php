@@ -31,6 +31,18 @@ class Zero
     {
         unset($this->properties[$name]);
     }
+
+    public function __call($name, $arguments)
+    {
+        $joined = join(", ", $arguments);
+        echo "Call method $name with arguments $joined" . PHP_EOL;
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        $joined = join(", ", $arguments);
+        echo "Call static method $name with arguments $joined" . PHP_EOL;
+    }
 }
 
 $zero = new Zero();
@@ -45,4 +57,7 @@ $zero = new Zero();
 $zero->firstName = "Muhammad";
 $zero->lastName = "Pauzi";
 echo "First name $zero->firstName" . PHP_EOL;
-echo "Last name $zero->lastName";
+echo "Last name $zero->lastName" . PHP_EOL;
+
+$zero->sayHello('oji', 'test');
+Zero::sayStaticHello('static', 'method', '123');
